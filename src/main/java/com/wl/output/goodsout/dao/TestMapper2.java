@@ -13,6 +13,6 @@ import java.util.List;
 @Repository
 public interface TestMapper2 {
     @Select(" SELECT * FROM tbl_user")
-//    @TargetDataSource("db2")
+    @TargetDataSource("db2")
     List<User> getAll();
 }

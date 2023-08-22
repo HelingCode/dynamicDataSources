@@ -43,10 +43,10 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
     /**
      * 由于部分数据源配置不同，所以在此处添加别名，避免切换数据源出现某些参数无法注入的情况
      */
-//    static {
-//        aliases.addAliases("url", new String[]{"jdbc-url"});
-//        aliases.addAliases("username", new String[]{"user"});
-//    }
+    static {
+        aliases.addAliases("url", new String[]{"jdbc-url"});
+        aliases.addAliases("username", new String[]{"user"});
+    }
 
     /**
      * 存储我们注册的数据源
