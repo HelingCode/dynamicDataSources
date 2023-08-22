@@ -1,0 +1,31 @@
+
+    # 初始化数据库，文件在依赖jar包中
+#  sql:
+#    init:
+#      schema-locations: classpath:org/springframework/batch/core/schema-mysql.sql
+#      #mode: always
+#      mode: never
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    name: defaultDataSource
+    jdbc-url: jdbc:mysql://172.16.90.100:3306/springbatch?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Zlh627708
+    type: com.zaxxer.hikari.HikariDataSource
+    db1:
+      jdbc-url: jdbc:mysql://172.16.90.100:3306/springbatch?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: Zlh627708
+    db2:
+      jdbc-url: jdbc:mysql://172.16.90.100:3306/springbatchHis?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: Zlh627708
+
+
+
+    ## Mybatis 配置
+mybatis:
+  mapper-locations: classpath*:com/wl/output/goodsout/mapper/*Mapper.xml
+  type-aliases-package: com.wl.output.goodsout.model
+
