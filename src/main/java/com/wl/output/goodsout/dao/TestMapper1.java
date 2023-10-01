@@ -12,6 +12,8 @@ import java.util.List;
 @Mapper
 @Repository
 public interface TestMapper1 {
+
+    // 查询用户
     @Select(" SELECT * FROM tbl_user")
     @TargetDataSource("db1")
     List<User> getAll();
